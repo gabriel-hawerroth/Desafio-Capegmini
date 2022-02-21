@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class Senha {
 
-    /* Abre uma caixa de texto para o usuário inserir a senha */
+    // Abre uma caixa de texto para o usuário inserir a senha
     static String senha_inserida = Digite_a_palavra();
     private static String Digite_a_palavra() {
 		String senha_inserida = "";
@@ -15,13 +15,13 @@ public class Senha {
     public static void valida_senha(String senha){
         System.out.println(senha);
         
-        /* Define as variáveis */
+        // Define as variáveis
         String numeros = "0123456789";
         String minusculas = "abcdefghijklmnopqrstuvxwyz";
         String maiusculas = "ABCDEFGHIJKLMNOPQRSTUVXWYZ";
         String especiais = "!@#$%^&*()-+";
 
-        /* Inicializa as variáveis */
+        // Inicializa as variáveis
         int qtd_numeros = 0;
         int qtd_minusculas = 0;
         int qtd_maiusculas = 0;
@@ -32,8 +32,9 @@ public class Senha {
         int tamanho_validado = 0;
         int caracteres_faltantes = 0;
 
-        /* Incrementa a quantidade de números, letras minúsculas e maiúsculas, e caracteres especiais as suas respectivas variáveis
-        para conseguir realizar a verificação dos requisitos mais adiante */
+        /* Incrementa a quantidade de números, letras minúsculas e maiúsculas, 
+        e caracteres especiais as suas respectivas variáveis para conseguir 
+        realizar a verificação dos requisitos mais adiante */
         for (int i = 0; i < tamanho_senha; i++) {
             if (numeros.indexOf(senha.charAt(i)) >= 0) {
                 qtd_numeros++;
@@ -52,12 +53,12 @@ public class Senha {
             }
         }
 
-        /* Define as variáveis 'tamanho_validado' e 'caracteres_faltantes' */
+        // Define as variáveis 'tamanho_validado' e 'caracteres_faltantes'
         tamanho_validado = qtd_numeros + qtd_minusculas + qtd_maiusculas + qtd_especiais;
 
         caracteres_faltantes = tamanho_exigido - tamanho_validado;
 
-        /* Verifica se a senha atende os requisitos e imprime os resultados */
+        // Verifica se a senha atende os requisitos e imprime os resultados
         if(tamanho_validado < 6){
             System.out.println("Serao necessario(s) mais: " + caracteres_faltantes + " caracter(es).");
         }
