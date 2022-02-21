@@ -1,8 +1,20 @@
+import javax.swing.JOptionPane;
+
 public class Senha {
+
+    /* Abre uma caixa de texto para o usuário inserir a senha */
+    static String senha_inserida = Digite_a_palavra();
+    private static String Digite_a_palavra() {
+		String senha_inserida = "";
+		senha_inserida = JOptionPane.showInputDialog(null,
+				"Digite sua senha aqui",
+				"Insira a senha", JOptionPane.INFORMATION_MESSAGE);
+        return senha_inserida;
+    }
 
     public static void valida_senha(String senha){
         System.out.println(senha);
-
+        
         /* Define as variáveis */
         String numeros = "0123456789";
         String minusculas = "abcdefghijklmnopqrstuvxwyz";
@@ -66,6 +78,6 @@ public class Senha {
         }
     }
     public static void main(String[] args){
-        valida_senha("Ya3");
+        valida_senha(senha_inserida);
     }
 }
