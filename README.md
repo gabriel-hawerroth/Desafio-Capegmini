@@ -15,3 +15,5 @@ Para executar os arquivos primeiro você faz o download zip do repositório e ex
 2º: Depois que você já estiver na pasta onde estão salvos os arquivos basta digitar o comando 'java Escada.java' que você vai executar o arquivo "Escada.java", para os outros arquivos você segue o mesmo padrão, primeiro escreva o nome da extensão (java ou python) e depois o nome do arquivo.
 
 Nos arquivos 'Senha.java' e 'anagrama.java' ao executar irá abrir uma caixa de texto em sua tela pedindo para digitar a senha no arquivo 'Senha.java' e a palavra no arquivo 'anagrama.java', então você digita sua senha ou a palavra que você gostaria de ver os anagramas, pressiona ok e pronto.
+
+Se você quiser testar ou modificar o código basta copiá-lo e colar em um editor de código de sua preferência (lembrando sempre de salvar com a extensão certa, ex.:.java, .python.
