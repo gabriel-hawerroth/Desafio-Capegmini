@@ -7,22 +7,22 @@ public class anagrama {
 		String palavra = Digite_a_palavra();
 		char vetor[];
 
-		// metodo que retira todos os espaços do inicio, meio e fim das palavras digitadas
+		// Retira todos os espaços do início, meio e fim das palavras digitadas
 		palavra = Retira_Espaco(palavra);
 
 		vetor = new char[palavra.length()];
 
-		// metodo que armazena a palavra em vetor
+		// Armazena a palavra em um vetor
 		Quebra_Palavra(palavra, vetor);
 
-		// metodo que cria o anagrama
+		// Cria o anagrama
 		Calcula_Anagrama(vetor, 0);
 
-		// finaliza programa
+		// Termina o código
 		System.exit(0);
-	}// fim main()
+	}// Fim da classe main
 
-	// Este metodo pede ao usuario para entrar com uma palavra
+	// Pede ao usuário para digitar uma palavra
 	private static String Digite_a_palavra() {
 		String palavra = "";
 		while (palavra.length() <= 2) {
@@ -31,18 +31,18 @@ public class anagrama {
 					"Calculando Anagrama", JOptionPane.INFORMATION_MESSAGE);
 		}
 		return palavra;
-	}// fim metodo Digite_a_palavra()
+	}// Fim do método Digite_a_palavra
 
-	/** Este metodo mostra a palavra. A palavra é armazenada em um vetor para
-	    ficar mais facil o manuseio */
+	/** Mostra a palavra; a palavra é armazenada em um vetor para
+	    ficar mais fácil o manuseio */
 	private static void Mostra(char[] vetor) {
 		for (int i = 0; i < vetor.length; i++) {
 			System.out.print(vetor[i] + " ");
 		}// for
 		System.out.println("");
-	}// fim metodo Mostra()
+	}// Fim do método Mostra
 
-	/** Este metodo recebe uma palavra e remove todos os espaços entre, durante e
+	/** Recebe uma palavra e remove todos os espaços entre, durante e
 	    no final de qualquer palavra. */
 	private static String Retira_Espaco(String palavra) {
 		String alterada = "", interna = (palavra).trim();
@@ -56,9 +56,9 @@ public class anagrama {
 		}// for
 
 		return alterada;
-	}// fim metodo Retira_Espaco()
+	}// Fim do método Retira_Espaco
 
-	/** Este metodo recebe o vetor contendo a palavra e mostra para o usuario
+	/** Recebe o vetor contendo a palavra e mostra para o usuário
 	    todas as possibilidades de anagrama com esta palavra. */
 	private static void Calcula_Anagrama(char vetor[], int k) {
 		int i;
@@ -74,20 +74,20 @@ public class anagrama {
 				i = i + 1;
 			}
 		}
-	}// fim metodo Calcula_Anagrama()
+	}// Fim do método Calcula_Anagrama
 
-	// Este metodo efetua a troca das posições desejadas 
+	// Efetua a troca das posições desejadas 
 	private static void Troca_Posicao(char[] vetor, int k, int i) {
 		char aux;
 		aux = vetor[i];
 		vetor[i] = vetor[k];
 		vetor[k] = aux;
-	}// fim metodo Troca_Posicao()
+	}// Fim metodo Troca_Posicao()
 
-	// Este metodo recebe a palavra e um vetor vazio e retorna o vetor contendo a palavra
+	// Recebe a palavra e um vetor vazio e retorna o vetor contendo a palavra
 	private static void Quebra_Palavra(String palavra, char vetor[]) {
 		for (int i = 0; i < vetor.length; i++) {
 			vetor[i] = palavra.charAt(i);
 		}// for
-	}// fim metodo Quebra_Palavra()
-}// fim class
+	}// Fim do método Quebra_Palavra
+}// Fim class
